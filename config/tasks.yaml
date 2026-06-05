@@ -1,0 +1,13 @@
+data_extraction_task:
+  description: >
+    Query the vector document store thoroughly to find the following key operational metrics for the latest fiscal year: Total Revenue, Operating Margin, Net Debt, and Year-over-Year (YoY) Growth rate.
+  expected_output: >
+    A clean, structured Markdown table containing only the extracted values along with page number citations.
+  agent: research_agent
+
+financial_evaluation_task:
+  description: >
+    Review the table provided by the research agent. Calculate the Debt-to-Equity ratio or structural operating margin health, identify any anomalous metrics, and provide a 3-point investment risk summary.
+  expected_output: >
+    A comprehensive investment analysis report in Markdown format with an explicitly assigned risk rating (Low, Medium, High).
+  agent: analysis_agent
